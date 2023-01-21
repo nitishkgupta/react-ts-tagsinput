@@ -1,5 +1,5 @@
 # react-ts-tagsinput
-A simple React tags input component built on TypeScript.
+A simple React tags input component written in TypeScript.
 
 ![Screenshot](https://github.com/nitishkgupta/react-ts-tagsinput/raw/master/example/screenshot.png)
 
