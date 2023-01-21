@@ -36,4 +36,4 @@ function App() {
 | onChange        	| Function (newTags: Array) => void 	| The callback function that triggers whenever there is a change in the tags array. 	| No       	| -           	|
 
   ## Contributions
-  Open to feedback and contributions. [nitishkgupta/react-ts-tagsinput](https://github.com/nitishkgupta/react-ts-tagsinput)
+  Open to feedback and contributions. GitHub: [nitishkgupta/react-ts-tagsinput](https://github.com/nitishkgupta/react-ts-tagsinput)
