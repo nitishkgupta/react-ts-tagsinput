@@ -1,5 +1,4 @@
 import React from 'react';
-import './TagsInput.css';
 
 export type Tag = string | number;
 
@@ -10,22 +9,26 @@ export interface TagsInputProps {
     allowDuplicates?: boolean,
     disabled?: boolean,
     prepend?: string | number,
-    onChange?: (newTags: Array<Tag>) => void
+    onChange?: (tags: Array<Tag>) => void,
+    max?: number,
 }
 
 const TagsInputDefaultProps = {
     placeholder: 'Add new tag',
     value: [],
     allowDuplicates: false,
-    disabled: false
+    disabled: false,
+    max: -1
 }
 
 export function TagsInput(props: TagsInputProps) {
 
     const [tags, setTags] = React.useState<Array<Tag>>(props.value!);
-    const inputBox = React.useRef<HTMLInputElement>(null);
+    const inputField = React.useRef<HTMLInputElement>(null);
+    const isDisabled: boolean = props.disabled ? true : props.max && props.max > -1 && tags.length >= props.max ? true : false;
 
     const addTag = (newTag: Tag) => {
+        if( props.max && props.max > -1 && tags.length >= props.max ) return;
         if( props.allowDuplicates ) {
             setTags((oldTags) => [...oldTags, newTag]);
         } else {
@@ -40,15 +43,12 @@ export function TagsInput(props: TagsInputProps) {
     }
 
     const handleSubmit = (e: React.FormEvent) => {
-        
         e.preventDefault();
-        
-        if( inputBox.current ) {
-            let newTag: Tag = inputBox.current.value;
+        if( inputField.current ) {
+            let newTag: Tag = inputField.current.value;
             addTag(newTag);
-            inputBox.current.value = "";
+            inputField.current.value = "";
         }
- 
     }
 
     React.useEffect(() => {
@@ -57,10 +57,10 @@ export function TagsInput(props: TagsInputProps) {
 
     return(
         <div className={`tags-input tags-input-${props.name}`}>
-            <form onSubmit={(e) => handleSubmit(e)}>
-                <input type='text' name={props.name} className='input-box' ref={inputBox} placeholder={props.placeholder} required disabled={props.disabled} />
+            <form className='tags-input-form' onSubmit={(e) => handleSubmit(e)}>
+                <input type='text' name={props.name} className='input-field' ref={inputField} placeholder={props.placeholder} required disabled={isDisabled} />
             </form>
-            <div className='tags'>
+            <div className='tags-container'>
                 {
                     tags && tags.length > 0 ?
                         tags.map((tag, i) =>
@@ -69,7 +69,7 @@ export function TagsInput(props: TagsInputProps) {
                                 <span className='remove-tag' title='Remove' onClick={() => removeTag(i)}>x</span>
                             </div>
                         )
-                    : <span style={{ color: 'transparent' }}>-</span>
+                    : <span className='no-tags' style={{ color: 'transparent' }}>-</span>
                 }
             </div>
         </div>

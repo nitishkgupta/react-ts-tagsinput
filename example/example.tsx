@@ -1,8 +1,9 @@
 import React from "react";
 import type { Tag } from 'react-ts-tagsinput';
 import { TagsInput } from "react-ts-tagsinput";
+import 'react-ts-tagsinput/lib/defaultTheme.css';
 
-function App() {
+export default function App() {
 
   const [tags, setTags] = React.useState<Array<Tag>>(["Tag 1", "Tag 2", "Tag 3", "Tag 4"]);
   
