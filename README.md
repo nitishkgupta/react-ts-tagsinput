@@ -3,8 +3,11 @@ A simple React tags input component written in TypeScript.
 
 ![Screenshot](https://github.com/nitishkgupta/react-ts-tagsinput/raw/master/example/screenshot.png)
 
-## Example
+## Installation
+Install the component using any package manager like npm:
+> npm i react-ts-tagsinput
 
+## Example
 ```typescript
 import React from "react";
 import type { Tag } from 'react-ts-tagsinput';
@@ -38,7 +41,7 @@ export default function App() {
 | max             	| number                            	| Limit the maximum number of tags. Set `-1` for no limit.                          	| No       	| -1          	|
 
 ## Changelog
-[https://github.com/nitishkgupta/react-ts-tagsinput/CHANGELOG.md](https://github.com/nitishkgupta/react-ts-tagsinput/CHANGELOG.md)
+[https://github.com/nitishkgupta/react-ts-tagsinput/blob/master/CHANGELOG.md](https://github.com/nitishkgupta/react-ts-tagsinput/blob/master/CHANGELOG.md)
 
 ## Contributions
 Open to feedback and contributions at [nitishkgupta/react-ts-tagsinput](https://github.com/nitishkgupta/react-ts-tagsinput).
