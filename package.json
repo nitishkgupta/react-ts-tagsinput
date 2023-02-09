@@ -14,9 +14,8 @@
     "url": "git+https://github.com/nitishkgupta/react-ts-tagsinput.git"
   },
   "keywords": [
-    "tags",
-    "tag",
-    "input",
+    "tags input",
+    "tag input",
     "component",
     "react",
     "typescript"
