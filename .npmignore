@@ -3,3 +3,4 @@ src
 example
 tsconfig.json
 CHANGELOG.md
+.eslintrc.json
