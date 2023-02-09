@@ -5,6 +5,7 @@ A simple React tags input component written in TypeScript.
 
 ## Installation
 Install the component using any package manager like npm:
+
 ```npm i react-ts-tagsinput```
 
 ## Example
