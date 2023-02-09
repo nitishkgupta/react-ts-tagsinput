@@ -5,7 +5,7 @@ A simple React tags input component written in TypeScript.
 
 ## Installation
 Install the component using any package manager like npm:
->npm i react-ts-tagsinput
+```npm i react-ts-tagsinput```
 
 ## Example
 ```typescript
@@ -33,7 +33,7 @@ export default function App() {
 |-----------------	|-----------------------------------	|-----------------------------------------------------------------------------------	|----------	|-------------	|
 | name            	| string                            	| The name attribute of the input field.                                            	| Yes      	| -           	|
 | placeholder     	| string                            	| The placeholder attribute of the input field.                                     	| No       	| Add new tag 	|
-| value           	| Array<Tag>                        	| The array of tags.                                                                	| No       	| []          	|
+| value           	| Array<Tag>                        	| The array of tags.                                                                	| Yes       	| []          	|
 | allowDuplicates 	| boolean                           	| Whether to allow duplicate tags or not.                                           	| No       	| false       	|
 | disabled        	| boolean                           	| The disabled attribute of the input field.                                        	| No       	| false       	|
 | prepend         	| string \| number                  	| Text to prepend before each tag. Example: '#'.                                    	| No       	| -           	|

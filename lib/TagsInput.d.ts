@@ -3,7 +3,7 @@ export type Tag = string | number;
 export interface TagsInputProps {
     name: string;
     placeholder?: string;
-    value?: Array<Tag>;
+    value: Array<Tag>;
     allowDuplicates?: boolean;
     disabled?: boolean;
     prepend?: string | number;

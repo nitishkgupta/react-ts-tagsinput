@@ -5,7 +5,7 @@ export type Tag = string | number;
 export interface TagsInputProps {
     name: string,
     placeholder?: string,
-    value?: Array<Tag>,
+    value: Array<Tag>,
     allowDuplicates?: boolean,
     disabled?: boolean,
     prepend?: string | number,
@@ -23,7 +23,7 @@ const TagsInputDefaultProps = {
 
 export function TagsInput(props: TagsInputProps) {
 
-    const [tags, setTags] = React.useState<Array<Tag>>(props.value!);
+    const [tags, setTags] = React.useState<Array<Tag>>(props.value);
     const inputField = React.useRef<HTMLInputElement>(null);
     const isDisabled: boolean = props.disabled ? true : props.max && props.max > -1 && tags.length >= props.max ? true : false;
 
@@ -37,7 +37,7 @@ export function TagsInput(props: TagsInputProps) {
     }
 
     const removeTag = (arrayIndex: number) => {
-        let newTags: Array<Tag> = [...tags];
+        const newTags: Array<Tag> = [...tags];
         newTags.splice(arrayIndex, 1);
         setTags(newTags);
     }
@@ -45,7 +45,7 @@ export function TagsInput(props: TagsInputProps) {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if( inputField.current ) {
-            let newTag: Tag = inputField.current.value;
+            const newTag: Tag = inputField.current.value;
             addTag(newTag);
             inputField.current.value = "";
         }
