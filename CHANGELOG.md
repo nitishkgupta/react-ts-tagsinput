@@ -2,13 +2,13 @@
 
 ## v2.0.1 (12-04-2023)
 
-Major release highlighting following changes:
+Major release highlighting the following changes:
 
 - Major design overhaul.
 - Accessibility improvements.
 - Memoized the component.
 - Updated dependencies.
-- Improved source code formating.
+- Improved source code formatting.
 - Added `type` property.
 - Added `addOnBlur` property.
 - Added `autoFocus` property.
