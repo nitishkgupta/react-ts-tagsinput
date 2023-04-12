@@ -1,6 +1,6 @@
 # Changelog
 
-## v2.0.0 (09-04-2023)
+## v2.0.1 (12-04-2023)
 
 Major release highlighting following changes:
 
