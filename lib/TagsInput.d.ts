@@ -1,22 +1,47 @@
-/// <reference types="react" />
+import React from 'react';
 export type Tag = string | number;
 export interface TagsInputProps {
     name: string;
-    placeholder?: string;
     value: Array<Tag>;
+    placeholder?: string;
     allowDuplicates?: boolean;
     disabled?: boolean;
-    prepend?: string | number;
-    onChange?: (tags: Array<Tag>) => void;
+    prepend?: string;
     max?: number;
+    addOnBlur?: boolean;
+    type?: React.HTMLInputTypeAttribute;
+    autoFocus?: boolean;
+    inputProps?: {
+        [key: string]: unknown;
+    };
+    tagProps?: {
+        [key: string]: unknown;
+    };
+    formProps?: {
+        [key: string]: unknown;
+    };
+    hideSubmitButton?: boolean;
+    onChange?: (tags: Array<Tag>) => void;
+    tagValidation?: (tag: Tag) => boolean;
+    tagFilter?: (tag: Tag) => Tag;
 }
-export declare function TagsInput(props: TagsInputProps): JSX.Element;
-export declare namespace TagsInput {
+declare function TagsInput_(props: TagsInputProps): JSX.Element;
+declare namespace TagsInput_ {
+    var displayName: string;
     var defaultProps: {
         placeholder: string;
-        value: never[];
         allowDuplicates: boolean;
         disabled: boolean;
         max: number;
+        addOnBlur: boolean;
+        type: string;
+        autoFocus: boolean;
+        tagValidation: () => boolean;
+        inputProps: {};
+        tagProps: {};
+        formProps: {};
+        hideSubmitButton: boolean;
     };
 }
+export declare const TagsInput: React.MemoExoticComponent<typeof TagsInput_>;
+export {};

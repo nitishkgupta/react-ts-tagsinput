@@ -1,7 +1,7 @@
 {
   "name": "react-ts-tagsinput",
-  "version": "1.0.0",
-  "description": "A simple React tags input component written in TypeScript.",
+  "version": "2.0.0",
+  "description": "A simple and customizable React tags input component written in TypeScript.",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nitishkgupta/react-ts-tagsinput.git"
+    "url": "https://github.com/nitishkgupta/react-ts-tagsinput.git"
   },
   "keywords": [
     "tags input",
@@ -39,7 +39,7 @@
     "eslint-plugin-react": "^7.32.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.9.4"
+    "typescript": "^5.0.4"
   },
   "dependencies": {
     "tslib": "^2.4.1"
