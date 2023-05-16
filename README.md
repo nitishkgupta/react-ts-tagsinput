@@ -3,8 +3,11 @@ A simple and customizable React tags input component written in TypeScript.
 
 ![Screenshot](https://github.com/nitishkgupta/react-ts-tagsinput/raw/master/example/screenshot.png)
 
+[![Live Demo](https://raw.githubusercontent.com/nitishkgupta/react-ts-tagsinput/master/example/live-demo.png)](https://codesandbox.io/s/react-ts-tagsinput-demo-4bctpm)
+
+
 ## Installation
-Install the component using npm package manager:
+Install the component using npm/yarn package manager:
 
 ```npm i react-ts-tagsinput```
 
@@ -22,7 +25,7 @@ export default function App() {
 
   const handleTagsChange = React.useCallback((updatedTags: Array<Tag>) => {
     setTags(updatedTags);
-  }, [tags]);
+  }, []);
   
   return(
     <div className='app'>

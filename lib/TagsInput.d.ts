@@ -25,7 +25,7 @@ export interface TagsInputProps {
     tagValidation?: (tag: Tag) => boolean;
     tagFilter?: (tag: Tag) => Tag;
 }
-declare function TagsInput_(props: TagsInputProps): JSX.Element;
+declare function TagsInput_(props: TagsInputProps): import("react/jsx-runtime").JSX.Element;
 declare namespace TagsInput_ {
     var displayName: string;
     var defaultProps: {

@@ -10,7 +10,7 @@ export default function App() {
 
   const handleTagsChange = React.useCallback((updatedTags: Array<Tag>) => {
     setTags(updatedTags);
-  }, [tags]);
+  }, []);
   
   return(
     <div className='app'>
