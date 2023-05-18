@@ -7,7 +7,7 @@ A simple and customizable React tags input component written in TypeScript.
 
 
 ## Installation
-Install the component using npm/yarn package manager:
+Install the component using npm package manager:
 
 ```npm i react-ts-tagsinput```
 
@@ -43,7 +43,7 @@ export default function App() {
 | Prop             | Type                                       | Description                                                                                                                                                                                           | Required | Default    |
 |------------------|--------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|------------|
 | name             | string                                     | The name attribute of the input field.                                                                                                                                                                | Yes      | -          |
-| type             | string                                     | The placeholder attribute of the input field.                                                                                                                                                         | No       | text       |
+| type             | string                                     | The type of the input field.                                                                                                                                                         | No       | text       |
 | placeholder      | string                                     | The placeholder of the input field.                                                                                                                                                                   | No       | Add a tag  |
 | value            | Array\<Tag>                                | The array of tags.                                                                                                                                                                                    | Yes      | -          |
 | allowDuplicates  | boolean                                    | Whether to allow duplicate tags or not.                                                                                                                                                               | No       | false      |

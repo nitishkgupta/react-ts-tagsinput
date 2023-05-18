@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.3 (18-05-2023)
+
+- Updated README file.
+
 ## v2.0.2 (16-05-2023)
 
 - Bumped dependencies.

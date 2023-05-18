@@ -1,6 +1,6 @@
 {
   "name": "react-ts-tagsinput",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A simple and customizable React tags input component written in TypeScript.",
   "main": "lib/index.js",
   "module": "lib/index.js",
